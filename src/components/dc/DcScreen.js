@@ -4,7 +4,7 @@ export const DcScreen = () => {
   return (
     <div>
 
-        <h1>DcScreen</h1>
+        <h1 >DcScreen</h1>
         <HeroList publisher ='DC Comics'/>
     </div>
   )

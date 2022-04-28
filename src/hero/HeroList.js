@@ -1,13 +1,21 @@
+
+//funciones
+import 'animate.css';
+import { HeroCard } from './HeroCard'
+import { useMemo} from 'react';
+
 //componentes
 import { getHeroByPublisher } from '../selectors/getHeroByPublisher'
 
-//funciones
-import { HeroCard } from './HeroCard'
-
 export const HeroList = ({ publisher }) => {
-  const heroes = getHeroByPublisher(publisher)
+
+  const heroes = useMemo(()=>{
+return getHeroByPublisher(publisher)
+  }, [publisher]) 
+ 
+
   return (
-    <div className="row rows-cols-1 row-cols-md-3 g-3">
+    <div className="row rows-cols-1 row-cols-md-3 g-3 animate__animated animate__fadeIn">
       {heroes.map((hero) => (
         < HeroCard key={hero.id} {...hero} />
       ))}
