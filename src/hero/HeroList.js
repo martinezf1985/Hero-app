@@ -1,6 +1,6 @@
 
 //funciones
-import 'animate.css';
+// import 'animate.css';
 import { HeroCard } from './HeroCard'
 import { useMemo} from 'react';
 
